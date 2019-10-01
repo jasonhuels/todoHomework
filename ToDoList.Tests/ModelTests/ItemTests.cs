@@ -10,7 +10,7 @@ namespace ToDoList.Tests
   {
     public void Dispose()
     {
-        // Item.ClearAll();
+        Item.ClearAll();
     }
 
    [TestMethod]
@@ -23,17 +23,31 @@ namespace ToDoList.Tests
     [TestMethod]
     public void GetDescription_ReturnsDescription_String()
     {
-        //Arrange
-        string description = "Walk the dog.";
-        Item newItem = new Item(description);
+      //Arrange
+      string description = "Walk the dog.";
 
-        //Act
-        string updatedDescription = "Do the dishes";
-        newItem.Description = updatedDescription;
-        string result = newItem.Description;
+      //Act
+      Item newItem = new Item(description);
+      string result = newItem.Description;
 
-        //Assert
-        Assert.AreEqual(updatedDescription, result);
+      //Assert
+      Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string description = "Walk the dog.";
+      Item newItem = new Item(description);
+
+      //Act
+      string updatedDescription = "Do the dishes";
+      newItem.Description = updatedDescription;
+      string result = newItem.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
     }
 
     [TestMethod]
@@ -44,11 +58,6 @@ namespace ToDoList.Tests
 
         // Act
         List<Item> result = Item.GetAll();
-
-        foreach (Item thisItem in result)
-        {
-            Console.WriteLine("Output from empty list GetAll test: " + thisItem.Description);
-        }
 
         // Assert
         CollectionAssert.AreEqual(newList, result);
@@ -66,11 +75,6 @@ namespace ToDoList.Tests
 
         //Act
         List<Item> result = Item.GetAll();
-
-        foreach (Item thisItem in result)
-        {
-            Console.WriteLine("Output from second GetAll test: " + thisItem.Description);
-        }
 
         //Assert
         CollectionAssert.AreEqual(newList, result);

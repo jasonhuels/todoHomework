@@ -23,5 +23,13 @@ namespace ToDoList.Models
         {
             _instances.Clear();
         }
+
+      class Program 
+      {
+           static void Main ()
+           {
+
+           }
+      }  
   }
 }

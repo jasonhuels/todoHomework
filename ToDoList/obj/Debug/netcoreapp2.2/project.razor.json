@@ -2961,8 +2961,13 @@
   "RootNamespace": "ToDoList",
   "Documents": [
     {
-      "FilePath": "Views/Home/CreateForm.cshtml",
-      "TargetPath": "Views/Home/CreateForm.cshtml",
+      "FilePath": "Views/Items/Index.cshtml",
+      "TargetPath": "Views/Items/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Items/CreateForm.cshtml",
+      "TargetPath": "Views/Items/CreateForm.cshtml",
       "FileKind": "mvc"
     },
     {
